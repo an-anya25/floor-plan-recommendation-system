@@ -22,4 +22,6 @@ from recom_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.landing, name='landing'),
+    path('input/', views.recommend_floor_plans_view, name='input_form'),
+
 ]

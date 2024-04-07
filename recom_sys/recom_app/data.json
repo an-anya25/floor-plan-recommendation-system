@@ -1,0 +1,195 @@
+{
+    "floor_plans": [
+      {
+        "name": "3B_N_1",
+        "no_of_rooms": 3,
+        "no_of_bathrooms": 1,
+        "no_of_attached": 0,
+        "no_of_wo": 1,
+        "garage": "yes",
+        "porch": "no",
+        "overall_sq_ft": 1061.78884
+      },
+      {
+        "name": "3B_N_2",
+        "no_of_rooms": 3,
+        "no_of_bathrooms": 1,
+        "no_of_attached": 0,
+        "no_of_wo": 1,
+        "garage": "yes",
+        "porch": "yes",
+        "overall_sq_ft": 937.763286
+      },
+      {
+        "name": "3B_N_4",
+        "no_of_rooms": 3,
+        "no_of_bathrooms": 1,
+        "no_of_attached": 0,
+        "no_of_wo": 1,
+        "garage": "yes",
+        "porch": "no",
+        "overall_sq_ft": 1100.879
+      },
+      {
+        "name": "3B_N_3",
+        "no_of_rooms": 3,
+        "no_of_bathrooms": 1,
+        "no_of_attached": 0,
+        "no_of_wo": 1,
+        "garage": "yes",
+        "porch": "yes",
+        "overall_sq_ft": 1009.11282
+      },
+      {
+        "name": "3B_N_5",
+        "no_of_rooms": 3,
+        "no_of_bathrooms": 1,
+        "no_of_attached": 0,
+        "no_of_wo": 0,
+        "garage": "yes",
+        "porch": "no",
+        "overall_sq_ft": 1181.07635
+      },
+      {
+        "name": "3B_N_6",
+        "no_of_rooms": 3,
+        "no_of_bathrooms": 2,
+        "no_of_attached": 0,
+        "no_of_wo": 2,
+        "garage": "yes",
+        "porch": "yes",
+        "overall_sq_ft": 1173.3654
+      },
+      {
+        "name": "3B_A_1",
+        "no_of_rooms": 3,
+        "no_of_bathrooms": 2,
+        "no_of_attached": 2,
+        "no_of_wo": 0,
+        "garage": "yes",
+        "porch": "no",
+        "overall_sq_ft": 800
+      },
+      {
+        "name": "3B_A_2",
+        "no_of_rooms": 3,
+        "no_of_bathrooms": 2,
+        "no_of_attached": 1,
+        "no_of_wo": 1,
+        "garage": "no",
+        "porch": "no",
+        "overall_sq_ft": 705.042
+      },
+      {
+        "name": "3B_A_3",
+        "no_of_rooms": 3,
+        "no_of_bathrooms": 3,
+        "no_of_attached": 2,
+        "no_of_wo": 1,
+        "garage": "no",
+        "porch": "yes",
+        "overall_sq_ft": 1000
+      },
+      {
+        "name": "3B_A_4",
+        "no_of_rooms": 3,
+        "no_of_bathrooms": 2,
+        "no_of_attached": 1,
+        "no_of_wo": 1,
+        "garage": "yes",
+        "porch": "no",
+        "overall_sq_ft": 869.35
+      },
+      {
+        "name": "3B_A_5",
+        "no_of_rooms": 3,
+        "no_of_bathrooms": 2,
+        "no_of_attached": 1,
+        "no_of_wo": 1,
+        "garage": "no",
+        "porch": "no",
+        "overall_sq_ft": 706.397
+      },
+      {
+        "name": "3B_A_6",
+        "no_of_rooms": 3,
+        "no_of_bathrooms": 2,
+        "no_of_attached": 1,
+        "no_of_wo": 1,
+        "garage": "yes",
+        "porch": "yes",
+        "overall_sq_ft": 1575
+      },
+      {
+        "name": "2B_N_1",
+        "no_of_rooms": 2,
+        "no_of_bathrooms": 1,
+        "no_of_attached": 0,
+        "no_of_wo": 1,
+        "garage": "yes",
+        "porch": "yes",
+        "overall_sq_ft": 1022.398
+      },
+      {
+        "name": "2B_N_2",
+        "no_of_rooms": 2,
+        "no_of_bathrooms": 1,
+        "no_of_attached": 0,
+        "no_of_wo": 1,
+        "garage": "no",
+        "porch": "yes",
+        "overall_sq_ft": 1200
+      },
+      {
+        "name": "2B_N_3",
+        "no_of_rooms": 2,
+        "no_of_bathrooms": 1,
+        "no_of_attached": 0,
+        "no_of_wo": 0,
+        "garage": "no",
+        "porch": "no",
+        "overall_sq_ft": 627.43
+      },
+      {
+        "name": "2B_A_1",
+        "no_of_rooms": 2,
+        "no_of_bathrooms": 2,
+        "no_of_attached": 1,
+        "no_of_wo": 1,
+        "garage": "yes",
+        "porch": "yes",
+        "overall_sq_ft": 668.43
+      },
+      {
+        "name": "2B_A_2",
+        "no_of_rooms": 2,
+        "no_of_bathrooms": 2,
+        "no_of_attached": 2,
+        "no_of_wo": 0,
+        "garage": "yes",
+        "porch": "yes",
+        "overall_sq_ft": 1313.5
+      },
+      {
+        "name": "2B_A_3",
+        "no_of_rooms": 2,
+        "no_of_bathrooms": 1,
+        "no_of_attached": 1,
+        "no_of_wo": 0,
+        "garage": "no",
+        "porch": "yes",
+        "overall_sq_ft": 900
+      },
+      {
+        "name": "2B_A_4",
+        "no_of_rooms": 2,
+        "no_of_bathrooms": 1,
+        "no_of_attached": 1,
+        "no_of_wo": 1,
+        "garage": "yes",
+        "porch": "no",
+        "overall_sq_ft": 786.14
+      }
+    ]
+  }
+  
