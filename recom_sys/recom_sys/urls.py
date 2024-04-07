@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from recom_app import views
+from django.conf.urls.static import static
+from django.conf import settings
 
 
 urlpatterns = [
@@ -25,4 +27,6 @@ urlpatterns = [
     path('input/', views.recommend_floor_plans_view, name='input_form'),
     path('result/', views.show_results_view, name='show_results'),
 
-]
+]\
+    + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)\
+    + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

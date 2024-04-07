@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+# from django.contrib import admin 
+# from django.urls import path, include 
+# from django.conf import settings 
+# from django.conf.urls.static import static  
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -69,6 +73,11 @@ TEMPLATES = [
     },
 ]
 
+
+# urlpatterns = [     path('admin/', admin.site.urls),    
+#                 path('', include('blog.urls')),  ] 
+# + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 
+
 WSGI_APPLICATION = 'recom_sys.wsgi.application'
 
 
@@ -125,5 +134,9 @@ STATICFILES_DIRS = [
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
