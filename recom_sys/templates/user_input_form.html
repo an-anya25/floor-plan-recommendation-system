@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Floor Plan Recommendation Form</h1>
-    <form method="post" action="{% url 'show_results' %}">
+    <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Submit</button>
