@@ -23,5 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.landing, name='landing'),
     path('input/', views.recommend_floor_plans_view, name='input_form'),
+    path('result/', views.show_results_view, name='show_results'),
 
 ]
