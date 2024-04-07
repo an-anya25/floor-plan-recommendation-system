@@ -10,7 +10,8 @@
     <h1>Recommended Floor Plans</h1>
     <div>
         {% for plan_name in recommended_plan_names %}
-            <img src="{{ MEDIA_URL}}/{{ plan_name }}.jpeg" alt="{{ plan_name }}">
+            {% comment %} <img src="{{ }}/{{ plan_name }}.jpeg" alt="{{ plan_name }}"> {% endcomment %}
+            <img src="{% static 'images/' %}{{ plan_name }}.jpeg" alt="{{ plan_name }}">
         {% endfor %}
     </div>
 </body>
