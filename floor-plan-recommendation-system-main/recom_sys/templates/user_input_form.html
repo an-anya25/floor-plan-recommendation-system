@@ -1,0 +1,195 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floor Plan Recommendation Form</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+        }
+        form {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            max-width: 100%;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .form-group {
+            flex: 1; /* Each form group takes equal width */
+            margin-right: 10px; /* Adjust spacing between form groups */
+        }
+    </style>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <h1>Floor Plan Recommendation Form</h1>
+        <label for="id_no_of_rooms">Number of Rooms:</label>
+        {{ form.no_of_rooms }}
+        <label for="id_attached_required">Attached Bathroom:</label>
+        {{ form.attached_required }}
+        <label for="id_garage_required">Garage:</label>
+        {{ form.garage_required }}
+        <label for="id_porch_required">Porch:</label>
+        {{ form.porch_required }}
+        <label for="room_relation_1">Room Relation 1:</label>
+        <div class="form-group">
+            <label for="room1">Room:</label>
+            <select name="room1" id="room1" onchange="updateRoom2Options()">
+                <option value="">Select Room</option>
+                <option value="kitchen">Kitchen</option>
+                <option value="living_room">Living Room</option>
+                <option value="dining_room">Dining Room</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="room2">Room Relation:</label>
+            <select name="room2" id="room2">
+                <option value="">Select Room Relation</option>
+            </select>
+        </div>
+        <label for="room_relation_2">Room Relation 2:</label>
+        <div class="form-group">
+            <label for="room3">Room:</label>
+            <select name="room3" id="room3" onchange="updateRoom4Options()">
+                <option value="">Select Room</option>
+                <option value="kitchen">Kitchen</option>
+                <option value="living_room">Living Room</option>
+                <option value="dining_room">Dining Room</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="room4">Room Relation:</label>
+            <select name="room4" id="room4">
+                <option value="">Select Room Relation</option>
+            </select>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <script>
+        function updateRoom2Options() {
+            var room1Select = document.getElementById('room1');
+            var room2Select = document.getElementById('room2');
+            var options = {
+                kitchen: [
+                    "Dining room-Kitchen-Living room",
+                    "Kitchen-Dining room",
+                    "Kitchen-Living room",
+                    "Kitchen-Bathroom"
+                ],
+                living_room: [
+                    "Living room-Dining room",
+                    "Living room-Bathroom",
+                    "Living room-Bedroom",
+                    "Living room-Kitchen",
+                ],
+                dining_room: [
+                    "Dining room-Living room",
+                    "Dining room-Kitchen",
+                    "Dining room-Kitchen-Living room",
+                ],
+            };
+
+            var selectedRoom = room1Select.value;
+            room2Select.innerHTML = ''; // Clear existing options
+
+            if (selectedRoom && options[selectedRoom]) {
+                options[selectedRoom].forEach(function(option) {
+                    var optionElement = document.createElement('option');
+                    optionElement.textContent = option;
+                    optionElement.value = option;
+                    room2Select.appendChild(optionElement);
+                });
+            }
+        }
+
+        function updateRoom4Options() {
+            var room3Select = document.getElementById('room3');
+            var room4Select = document.getElementById('room4');
+            var options = {
+                kitchen: [
+                    "Dining room-Kitchen-Living room",
+                    "Kitchen-Dining room",
+                    "Kitchen-Living room",
+                    "Kitchen-Bathroom"
+                ],
+                living_room: [
+                    "Living room-Dining room",
+                    "Living room-Bathroom",
+                    "Living room-Bedroom",
+                    "Living room-Kitchen",
+                ],
+                dining_room: [
+                    "Dining room-Living room",
+                    "Dining room-Kitchen",
+                    "Dining room-Kitchen-Living room",
+                ],
+            };
+
+            var selectedRoom = room3Select.value;
+            room4Select.innerHTML = ''; // Clear existing options
+
+            if (selectedRoom && options[selectedRoom]) {
+                options[selectedRoom].forEach(function(option) {
+                    var optionElement = document.createElement('option');
+                    optionElement.textContent = option;
+                    optionElement.value = option;
+                    room4Select.appendChild(optionElement);
+                });
+            }
+        }
+    </script>
+</body>
+</html>
