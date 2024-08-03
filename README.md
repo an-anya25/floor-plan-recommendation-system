@@ -2,4 +2,4 @@
 <br>
 BTech Final Year Project
 <br>
-Recommends floorplans based on user input using SimGNN Made using Django
+Recommends floorplans based on user input using SimGNN 
